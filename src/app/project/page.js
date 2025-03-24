@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { CalendarIcon,  ChevronLeft, ChevronRight, Upload } from "lucide-react"
 import Sidebar from "../_components/adminsidebar"
 
-export default function page() {
+export default function Page() {
   const [currentStep, setCurrentStep] = useState(0)
   const [errors, setErrors] = useState({})
 

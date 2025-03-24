@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Pencil, X, Upload, Plus, ChevronRight, Save } from "lucide-react"
+import { Pencil, X, Upload, Plus, Save } from "lucide-react"
 import Image from "next/image"
 
 
@@ -12,10 +12,8 @@ export default function HeroSliderEditor() {
       id: 1,
       title: "Power Converters for Clean Energy Products",
       description: "Efficient and reliable power conversion solutions for renewable energy applications.",
-      image: "/placeholder.svg?height=200&width=400",
-      ctaText: "Explore Solutions",
-      ctaLink: "Arrow Right",
-      ctaUrl: "https://example.com",
+      image: "/city.jpg",
+ 
       isEditing: false,
     },
 
@@ -38,7 +36,7 @@ export default function HeroSliderEditor() {
       id: newId,
       title: `Slide ${newId}`,
       description: "",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/city.jpg",
       ctaText: "Learn More",
       ctaLink: "Arrow Right",
       ctaUrl: "",
@@ -64,12 +62,12 @@ export default function HeroSliderEditor() {
           className="flex items-center gap-1 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-md text-sm transition-colors"
         >
           <Plus className="h-4 w-4" />
-          Add Slide
+          Add Banner
         </button>
       </div>
 
       <div className="space-y-8">
-        {slides.map((slide) => (
+        {slides?.map((slide) => (
           <div key={slide.id} className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
             <div className="flex justify-between items-center p-4 bg-gray-50 border-b">
               <h2 className="font-medium"></h2>
